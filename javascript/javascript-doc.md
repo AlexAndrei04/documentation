@@ -114,3 +114,30 @@ let user = {
   titulo: 'Lic.'
 }
 ```
+
+### Operador __in__
+
+_No sirve si hay una propiedad en el Objeto_
+
+``` JS
+let user = {
+  edad: 24,
+}
+
+console.log( 'edad' in user )
+true
+```
+
+_Para encontrar todas las propiedades de un Objeto exceptuando las que se puedan heradad es con __hasOwnProperty___
+
+``` JS
+let user = {
+  name: 'Alex Andrei',
+  age: 24,
+  country: 'México'
+}
+
+for ( let prototype in user ) {
+  if( user.hasOwnProperty( prototype ) ) console.log( prototype )
+}
+```
