@@ -1,5 +1,11 @@
 # Guía de uso de JavaScript 💕📓
 
+## Tabla de contenido
+
+1. [Array](#Array)
+1. [Object](#Object)
+1. [Fetch](#Fetch)
+
 ## Array
 
 ### .map(callback)
@@ -41,6 +47,8 @@ let arraySum = arrayNumbers.reduce( ( a, b ) => a + b )
 console.log( arrayResult )
 19
 ```
+
+**[[⬆️ Regresar a la Tabla de Contenido]](#tabla-de-contenido)**
 
 ## Object
 
@@ -141,3 +149,27 @@ for ( let prototype in user ) {
   if( user.hasOwnProperty( prototype ) ) console.log( prototype )
 }
 ```
+
+**[[⬆️ Regresar a la Tabla de Contenido]](#tabla-de-contenido)**
+
+## Fetch
+
+Manipulación de peticiones y respuestas, también proporciona una manera práctica y lógica de obtener recursos de forma asíncrona.
+
+_Necesita obligatoriamente de un argumento, la URL y devuelve un objeto Promise conteniendo la respuesta en "response" y para extraer la contenido se utiliza el método **json()**._
+
+_Para saber si la petición no fue encontrada, se utiliza el catch(). En caso que no encontrará un 404, la condicional lanzará el error con el estatus._
+
+``` JS
+fetch('https://jsonplaceholder.typicode.com/usedasadrs')
+  .then( response => {
+    if ( !response.ok) {
+      throw Error( response.status )
+    }
+    return response.json()
+  })
+  .then(json => console.log(json))
+  .catch(error => console.log(`Hubo un error con la petición Fetch: ${error.message}`))
+```
+
+**[[⬆️ Regresar a la Tabla de Contenido]](#tabla-de-contenido)**
