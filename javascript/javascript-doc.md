@@ -2,9 +2,55 @@
 
 ## Tabla de contenido
 
+1. [Loops](#Loops)
 1. [Array](#Array)
 1. [Object](#Object)
 1. [Fetch](#Fetch)
+
+## Loops
+
+### For
+
+Manera clásica de recorrer un Array.
+
+``` JS
+let array = [ 1, 2, 3, 4, 5 ]
+for ( let i = 0; i < array.length; i++ ) {
+  const element = array[i];
+  console.log( element );
+}
+
+log: 1, 2, 3, 4, 5
+```
+
+### ForOf
+
+Manera más práctica de hacer un For.
+
+``` JS
+let array = [ a, b, c, d ]
+for( element of arr ) {
+  console.log( element )
+}
+
+log: a, b, c, d
+```
+
+### ForEach
+
+Cuando deseemos aplicar una función a cada elemento.
+
+``` JS
+let array = [ a, b, c, d ]
+array.forEach( (element, i) => {
+  console.log( element );
+  console.log( i );
+});
+
+log: a, 0,  b, 1, c, 2, d, 3
+```
+
+**[[⬆️ Regresar a la Tabla de Contenido]](#tabla-de-contenido)**
 
 ## Array
 
