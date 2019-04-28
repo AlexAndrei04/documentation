@@ -155,6 +155,7 @@ log: a, 0,  b, 1, c, 2, d, 3
 ## Array
 
 ### .map(callback)
+
 Transorma todos los elementos del array.
 
 _Ejemplo: Arreglo que se multiplica por si mismo._
@@ -168,6 +169,7 @@ console.log( arrayResult )
 ```
 
 ### .filter(callback)
+
 Filtra los elementos que cumplan con la condición.
 
 _Ejemplo: Arreglo que busque números mayor a 5._
@@ -181,6 +183,7 @@ console.log( arrayResult )
 ```
 
 ### .reduce(callback)
+
 Reduce todos los elementos a un solo valor.
 El callback necesita de 2 valores.
 
