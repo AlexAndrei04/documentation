@@ -8,6 +8,7 @@
 1. [Array](#Array)
 1. [Object](#Object)
 1. [Fetch](#Fetch)
+1. [Modules](#Modules)
 
 ## Attributes
 
@@ -365,6 +366,26 @@ fetch('https://jsonplaceholder.typicode.com/usedasadrs')
   })
   .then(json => console.log(json))
   .catch(error => console.log(`Hubo un error con la petición Fetch: ${error.message}`))
+```
+
+**[[⬆️ Regresar a la Tabla de Contenido]](#tabla-de-contenido)**
+
+## Modules
+
+### Exportar módulos
+
+``` JS
+export const holaMundo = () => {
+  console.log( 'Hola mundo' )
+}
+```
+
+### Importar módulos
+
+``` JS
+import { saludo } from "./modules/saludo"
+
+holaMundo()
 ```
 
 **[[⬆️ Regresar a la Tabla de Contenido]](#tabla-de-contenido)**
