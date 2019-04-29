@@ -123,9 +123,17 @@ for ( let i = 0; i < array.length; i++ ) {
 log: 1, 2, 3, 4, 5
 ```
 
+### ForIn
+
+Devuelve los nombres de las propiedades de un objeto. Pero devuelve también las propiedades en la cadena de prototipos.
+
+
+
 ### ForOf
 
 Manera más práctica de hacer un For.
+
+> No puede recorrer un objeto debido a que no es iterable. (No tiene índices)
 
 ``` JS
 let array = [ a, b, c, d ]
@@ -300,7 +308,7 @@ let user = {
 
 ### Operador __in__
 
-_No sirve si hay una propiedad en el Objeto_
+_Nos sirve si hay una propiedad en el Objeto_
 
 ``` JS
 let user = {
@@ -324,6 +332,18 @@ for ( let prototype in user ) {
   if( user.hasOwnProperty( prototype ) ) console.log( prototype )
 }
 ```
+
+### Object.entries()
+
+Devuelve como arrays cada una de las entradas del objeto (propiedad, valor).
+
+### Object.keys()
+
+Devuelve un object (array like) con todas las propiedades.
+
+### Object.values()
+
+Devuelve los valores del objeto.
 
 **[[⬆️ Regresar a la Tabla de Contenido]](#tabla-de-contenido)**
 
